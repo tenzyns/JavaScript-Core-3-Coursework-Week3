@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+=> Because line 4 is block scope and line 6 is global scope.
 
 ## Question 2
 
@@ -34,6 +35,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+=> console.log(f1()) output will be: 10 as x defined outside the function is accessed by it. console.log(y) output will be undefined as y is only block scope and is not defined outside the function.
 
 ## Question 3
 
@@ -62,3 +64,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+=> f1(x) output will be 10 because f1(x) takes x=9 as an argument returns 10 while and console.log(x) output will be 9 as that is what x is defined. 
+
+=> f2(y) output will be {x:10} the object y's property x value is changed by the function f2. Output of console.log(y) will be {x:9} as this is just logging the y defined earlier.
