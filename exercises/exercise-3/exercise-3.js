@@ -6,3 +6,15 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function getReceipt(arr) {
+  let total = 0;
+  arr.forEach(obj => {
+    const {itemName, quantity, unitPrice } = obj;
+    console.log(`${quantity}    ${itemName}    ${unitPrice * quantity}`);
+    total += unitPrice * quantity;
+  });
+  console.log(`Total: ${total}`);
+}
+console.log("QTY " + "  ITEM " + "  SUBTOTAL");
+getReceipt(order);

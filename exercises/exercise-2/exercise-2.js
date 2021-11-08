@@ -70,3 +70,26 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//task 1-----
+
+function getNames(arr) {
+  let newArr = arr.filter(obj => obj.house === "Gryffindor");
+  newArr.map(obj => {
+    const {firstName, lastName} = obj;
+    console.log(`${firstName} ${lastName}`);
+  });
+}
+
+//getNames(hogwarts);
+
+//task 2-----
+function getTeachers(arr) {
+  let newArr = arr.filter(obj => obj.occupation === "Teacher" && obj.pet !== null);
+  newArr.map(obj => {
+    const { firstName, lastName } = obj;
+    console.log(`${firstName} ${lastName}`);
+  });
+}
+
+getTeachers(hogwarts);
